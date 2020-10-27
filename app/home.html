@@ -17,7 +17,7 @@
     <div class="side-bar-container">
         <div class="menu-iteam">
             <ul>
-                <li>
+                <li id="new-collection">
                     <a>
                      <i class="fa fa-bolt" aria-hidden="true"></i>
                     New Connection
@@ -54,7 +54,13 @@
           </div>
     </div>
 </div>
-
+<script>
+    newCollection = document.getElementById("new-collection")
+    newCollection.addEventListener("click", e =>{
+        e.preventDefault()
+        console.log("LI clicked")
+    })
+</script>
 </body>
 </html>
 
