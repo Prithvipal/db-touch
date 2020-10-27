@@ -17,8 +17,8 @@ let newConnWindow
 
 function createWindow () {
   mainWindow= new BrowserWindow({
-    width: 930,
-    height: 570,
+    // width: 930,
+    // height: 570,
     icon:"",
     title:"DB Editor",
     resizable: isDev?true:false,
@@ -26,15 +26,16 @@ function createWindow () {
       nodeIntegration: true
     }
   })
-
+  mainWindow.maximize();
+  mainWindow.show();
   mainWindow.loadFile('./app/home.html')
   mainWindow.webContents.openDevTools()
 }
 
 function createNewConnWindow(){
   newConnWindow = new BrowserWindow({
-    width: 530,
-    height: 470,
+    width: 900,
+    height: 600,
     icon:"",
     title:"New Connection",
     resizable: isDev?true:false,
@@ -44,7 +45,7 @@ function createNewConnWindow(){
   })
 
   newConnWindow.loadFile('./app/new_connection.html')
-  // newConnWindow.webContents.openDevTools()
+  //newConnWindow.webContents.openDevTools()
 }
 
 ipcMain.on("connection:new", (e, values) =>{
