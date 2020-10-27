@@ -29,6 +29,7 @@ function createWindow () {
 
   mainWindow.loadFile('./app/home.html')
   mainWindow.webContents.openDevTools()
+  mainWindow.maximize()
 }
 
 function createNewConnWindow(){
