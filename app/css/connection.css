@@ -46,8 +46,13 @@
     text-align: center;
 }
 
+.midle-container {
+    width: 50%; 
+    float: left; 
+    padding: 0 20px;
+}
 .right-container {
-    width: 80%; 
+    width: 30%; 
     float: left; 
     padding: 0 20px;
 }
@@ -62,6 +67,10 @@
     border-color: #427a96  !important;
     -webkit-box-shadow: 0 0 0 1px #427a96  !important;
     box-shadow: 0 0 0 1px #427a96  !important;
+}
+
+.btn-clour {
+    background-color: #427a96  !important;
 }
 
 .p-b-5 {
@@ -79,4 +88,12 @@
     padding-top: 10px;
 }
 
+.m-b-0 {
+    margin-bottom: 0;
+}
+
+label {
+    font-size: 14px;
+    color: black;
+}
 
