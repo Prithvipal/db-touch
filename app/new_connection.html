@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Connection</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/connection.css">
+
+</head>
+<body>
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="">
+            <h5>New Connection</h5>
+        </div>
+        <div class="card-panel white">
+
+            <div class="row">
+                <form class="col s12">
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <!-- <div class="p-b-10">Paste your connection string (SRV or Standard)</div> -->
+                            <!-- <input type="text" placeholder="eg mongodb+srv//username:password" class="validate custom-input-box"> -->
+                            <div class="col s6 m6 right-align">
+                                <label>Hostname</label>
+                            </div>
+                            <div class="col s6 m6">
+                                <input type="text" placeholder="localhost" class="validate custom-input-box">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <div class="col s6 m6 right-align">
+                                <label>Port</label>
+                            </div>
+                            <div class="col s6 m6">
+                                <input type="text" placeholder="27017" class="validate custom-input-box">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <div class="col s6 m6 right-align">
+                                <label>Authentication</label>
+                            </div>
+                            <div class="col s6 m6 input-field ">
+                                <select class="browser-default custom-input-box">
+                                    <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">None</option>
+                                        <option value="2">Username/Password</option>
+                                        <option value="3">SCRAM-SHA-256</option>
+                                  </select>
+                            </div>
+                      </div>
+                  </div>
+        
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <div class="col s6 m6 right-align">
+                                <label>Username</label>
+                            </div>
+                            <div class="col s6 m6">
+                                <input type="text" placeholder="" class="validate custom-input-box">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <div class="col s6 m6 right-align">
+                                <label>Password</label>
+                            </div>
+                            <div class="col s6 m6">
+                                <input type="text" placeholder="" class="validate custom-input-box">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="row m-b-0">
+                    <div class="input-field col s12 m12 valign-wrapper">
+                            <div class="col s6 m6 right-align">
+                                <label>Authentication Database</label>
+                            </div>
+                            <div class="col s6 m6">
+                                <input type="text" placeholder="admin" class="validate custom-input-box">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="row m-b-0">
+                    <div class="col s12 m12">
+                        <button class="btn waves-effect waves-light right btn-clour" type="submit" name="action">Connect</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>    
+        </div>
+      </div>
+</body>
+</html>

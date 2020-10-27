@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu, ipcMain } = require('electron')
 // require('electron-reload')(__dirname);
 
 
@@ -12,6 +12,8 @@ const isLinux = process.platform == "linux" ? true : false
 
 
 let mainWindow
+
+let newConnWindow
 
 function createWindow () {
   mainWindow= new BrowserWindow({
@@ -28,6 +30,26 @@ function createWindow () {
   mainWindow.loadFile('./app/home.html')
   mainWindow.webContents.openDevTools()
 }
+
+function createNewConnWindow(){
+  newConnWindow = new BrowserWindow({
+    width: 530,
+    height: 470,
+    icon:"",
+    title:"New Connection",
+    resizable: isDev?true:false,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
+
+  newConnWindow.loadFile('./app/new_connection.html')
+  // newConnWindow.webContents.openDevTools()
+}
+
+ipcMain.on("connection:new", (e, values) =>{
+  createNewConnWindow()
+})
 
 app.on("ready", () => {
   createWindow()
