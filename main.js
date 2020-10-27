@@ -77,7 +77,13 @@ const template = [
   {
   label: 'Connect',
   submenu: [
-    { label: 'Test' }]
+    {
+      label: 'New',
+      click(){
+        createNewConnWindow()
+      }
+    }
+  ]
   },
   {
     label: 'View',
