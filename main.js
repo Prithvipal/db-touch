@@ -46,11 +46,15 @@ function createNewConnWindow(){
   })
 
   newConnWindow.loadFile('./app/new_connection.html')
-  //newConnWindow.webContents.openDevTools()
+  newConnWindow.webContents.openDevTools()
 }
 
 ipcMain.on("connection:new", (e, values) =>{
   createNewConnWindow()
+})
+
+ipcMain.on("connection:test", (e, auth) =>{
+  console.log(auth)
 })
 
 app.on("ready", () => {
