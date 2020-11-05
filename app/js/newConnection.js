@@ -11,14 +11,18 @@ testConn.addEventListener("click", e =>{
     e.preventDefault()
     const auth = getAuthDetails()
     const url = getConnURL(auth)
-    console.log("Connecting to:::", url)
     MongoClient.connect(url, {useUnifiedTopology: true,useNewUrlParser:true, poolSize: 5, reconnectInterval: 500 },
         function(err, client){
+            let toastMsg
             if (err){
-                console.log("EEEEEerr", err)
+                toastMsg = `Connection Failed` 
+                
             }else {
-                console.log("Successful")
+                toastMsg = `Connection Successful` 
             }
+            M.toast({
+                html: toastMsg
+            })
 
             //console.log("DATABASE IS BEING LOGGED...." ,client);
             // var dbAdmin=client.db("test").admin();
